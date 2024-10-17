@@ -7,9 +7,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './main-component/header/header.component';
 import { provideHttpClient } from '@angular/common/http';
+import { CartComponent } from './others/cart/cart.component';
+import { FavoriteComponent } from './other/favorite/favorite.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HeaderComponent],
+  declarations: [AppComponent, HomeComponent, HeaderComponent, CartComponent, FavoriteComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],

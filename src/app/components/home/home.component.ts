@@ -9,13 +9,16 @@ import { ServiceProdService } from '../../services/service-prod.service';
 })
 export class HomeComponent {
   products: iProduct[] = [];
-
+  cart: iProduct[] = [];
   constructor(private prdSvc: ServiceProdService) {}
 
   ngOnInit() {
     this.prdSvc.getProduct().subscribe((products) => {
-      this.products = products.products;
+      this.products = products;
       console.log(this.products);
+    });
+    this.prdSvc.cart$.subscribe((product) => {
+      this.cart.push();
     });
   }
 }
